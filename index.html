@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Bookshelf App</title>
+</head>
+<body>
+  <div class="container">
+    <h1 style="text-align: center;">Bookshelf App</h1>
+
+    <form id="bookForm">
+      <label for="title">Title:</label>
+      <input type="text" id="title" required>
+
+      <label for="author">Author:</label>
+      <input type="text" id="author" required>
+
+      <label for="year">Year:</label>
+      <input type="number" id="year" required>
+
+      <div class="isComplete">
+        <label for="isComplete">Is Complete:</label>
+        <input type="checkbox" id="isComplete">
+      </div>
+
+      <button style="width: 50%;margin-left: 150pt;" type="submit" onclick="addBook()">Add Book</button>
+    </form>
+
+    
+
+    <div class="bookshelves">
+      <div class="bookshelf" id="incompleteBookList" style="margin-left: 30pt;" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <h2 style="text-align: center;">Belum Selesai Dibaca</h2>
+        <br><br>
+      </div>
+
+      <div   class="bookshelf" id="completeBookList" style="margin-left: 30pt;" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <h2 style="text-align: center;">Selesai Dibaca</h2> <br><br>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
